@@ -1,7 +1,7 @@
 # PowerShell
 
-![powershell-microsoft-sql-server-sharepoint-microsoft-windows-png-favpng-XMMXY68y1tJ8sz9i3fv98BNL0](https://user-images.githubusercontent.com/92652606/140179339-e0bf41da-767f-4e64-a73b-364ce1c4b282.jpg)
+![powershell-icon-4](https://user-images.githubusercontent.com/92652606/140179580-4de847c5-d5a5-4e05-8924-4cb36c060225.png)
 
-[PowerShell Part 1]()
-[PowerShell Part 2]()
-[Powershell Part 3]()
+1. [PowerShell Part 1]()
+2. [PowerShell Part 2]()
+3. [Powershell Part 3]()
