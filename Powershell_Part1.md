@@ -15,8 +15,8 @@ Get-Command -Name cp
     # 2. alias 
     # 3. functions : are commands Writen on Powershell 
 Get-Command -verb Get # to get all command that use Get . There is as well ( Set , Update , Move , Remove )
-Get-Command -Verb Move
-Get-Command -Verb Remove
+Get-Command -Verb Move # to get all command that use Move
+Get-Command -Verb Remove # to get all command that use remove
 Get-Command -Verb Get -noun help #  get all command that use Get and has a Help Name 
 ```
 <img width="907" alt="Screen Shot 2021-11-03 at 21 06 45" src="https://user-images.githubusercontent.com/92652606/140184762-717059db-b177-4475-9f8d-de347f876621.png">
