@@ -72,6 +72,41 @@ $newname = $name.Toupper()
 
 <img width="477" alt="Screen Shot 2021-11-04 at 20 36 53" src="https://user-images.githubusercontent.com/92652606/140408067-f4472139-5e34-4baf-a531-018fbd9a1d60.png">
 
+* ***Array***
+
+```powershell
+$countries = @("France" , "Spain" , "Germany" ) # defining Array 
+$countries[0] # reading the array elements
+$countries[0] = "Morocco" # modiving Array 
+$countries += "Holand" # adding Elements to array 
+$countries += @("Egypt" , "Jordan") # adding a array to array 
+```
+* ***ArrayLists***
+
+```powershell
+$countries = [System.Collections.ArrayList]@("France" , "Spain" , "Germany" ) # defining Array List
+$countries.add("Morocco") # Adding to Array list
+$countries.remove("France") # Removing from array list
+```
+* ***Hashtable ( Dictionary )***
+
+```powershell
+$hashes = @{ base64 = "cGFzc3dvcmQK", md5 = "286755fad04869ca523320acce0dc6a" , rot13 = "Cnffjbeq" } # defining a hashtable
+$hashes[base64] # reading Elements from hashtable
+$hashes.base64 # reading as well Elements from hashtable
+$hashes.Keys # getting all the keys 
+$hahes.Values # getting all the Values
+$hashes["shasum“] = "c8fed00eb2e87f1cee8e90ebbe870c190ac3848c" # addinh to the hashtable
+$hashes.ContainKeys("md4") # check if the key exsit in the hashtable
+$hashes.remove("rot13") 
+
+```
+
+
+
+
+ 
+
 
 
 
