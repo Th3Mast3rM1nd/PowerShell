@@ -8,5 +8,24 @@ Get-Process -name $process_name | Stop-Process # command1 | command2 | command3
 
 <img width="522" alt="Screen Shot 2021-11-15 at 14 47 17" src="https://user-images.githubusercontent.com/92652606/141792645-0e2439a6-06ab-49b0-9144-4b1aedfbed35.png">
 
+* ***Writing Scripts***
+
+```powershell
+
+Get-ExeuctionPolicy
+# restricted : dosent allow you run scripts
+# Allsigned : only trusted Scripts 
+# RemoteSigned : only scripts you did write or download 
+# Unrestricted : allow any script
+
+Set-ExecutionPloicy -ExecutionPolicy RemoteSigned
+
+bash -c "vim script.ps1" # to open script.ps1 in vim editor you can use nano as well bash -c "nano script.ps1"
+
+./script.ps1# to run your script 
+
+```
+
+
 
 
