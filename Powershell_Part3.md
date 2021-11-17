@@ -25,7 +25,64 @@ bash -c "vim script.ps1" # to open script.ps1 in vim editor you can use nano as 
 ./script.ps1# to run your script 
 
 ```
+* ***Conditional Statements*** 
 
+```powershell 
+1 -eq 1 # True  equal 
+1 -lt 2 # False less than 
+1 -le 2 # True  less than or equal
+2 -ne 1 # True  not equal 
+2 -gt 1 # True greater than
+2 -ge 2 # True greater than or equal  
+$name = "mastermind"
+$names = @("mastermind" , "root" , "admin )
+$names -contains $names # True -contains to check if value in array 
+```
+* ***if-else Statements***
 
+```powershell
+# if ( Condition ) {
+#    code to run 
+# } else {
+#    run this code
+}
+$name = "192.168.1.120"
+if ( Test-Connection -ComputerName $name -Quiet ) {
+    Write-Host " The Host $name Is Up "
+ } else {
+    Write-Error -Message " The Host $name Is Down "
+ }
+ # elsif Statements 
+$number = 10
+$number2 = 100
 
+if ( $number -ne 10 ) {
+        write-Host "number is equal $number "
+} elseif ( -not ( $number -eq $number2 )) {
+        write-Host "$number is not equal $number2 "
+} elseif ( $number -lt 100 ) {
+        Write-Host "number is less than 100 "
+}
+```
+* ***Switch Statement***
+
+```powershell
+Switch (<Value>)
+{
+<Condition1> {Action1}
+<Condition2> {Action2}
+}
+```
+```powershell
+$number = 100
+
+switch ($number){
+        10 { Write-Host "number is $number" }
+        100 { write-host "number is $number and greather than 99 " }
+        200 { Write-Host "number is gt 100 " }
+}
+```
+
+ 
+   
 
