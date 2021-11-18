@@ -33,7 +33,9 @@ Get-Variable -Name $number
 $number.GetType().name # get the type of a variable  INT32
 $number = 10.2
 $number.GetType().name # >> double 
-
+# Integers come in two flavours:
+                # - int (Int32)
+                # - long (Int64)
 # strings 
 
 $country = "Germany"
