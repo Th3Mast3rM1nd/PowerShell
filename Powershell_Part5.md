@@ -1,6 +1,6 @@
 # Part 5
 
-* ***Search in file using regex***
+* ***Search in a file using regex***
 
 ```powershell
 ipconfig | Out-File -FilePath "C:\ipconfig_file.txt" # we sent the output of ipconfig to file 
