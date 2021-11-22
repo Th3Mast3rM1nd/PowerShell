@@ -10,3 +10,7 @@ Get-Content -Path  C:\ipconfig_file.txt | Select-String -Pattern "[0-9]{1,3}(\.[
 Get-Content -Path C:\*.txt | Select-String -Pattern "Password*" 
 
 ```
+* ***Exceptions and Errors***
+
+```powershell 
+# 
