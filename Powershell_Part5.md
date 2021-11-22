@@ -13,4 +13,41 @@ Get-Content -Path C:\*.txt | Select-String -Pattern "Password*"
 * ***Exceptions and Errors***
 
 ```powershell 
-# 
+# -ErrorActions 
+# Continue : Output the error and Continue 
+# Stop : Output the error and Stop cmdlet Without Executing 
+# Ingnore : Continue Executing Cmdlet without outputing the Error 
+# SilentlyContinue : Continue Executing Cmdlet without outputing the Error ( error will be saved in $Error)
+# Inquire : Output The error and ask the user for input before Continue 
+
+try {
+    Code
+} catch {
+    code to run if error found 
+} Finally {
+    Code to run at the end 
+}
+
+[Int32]$number = 0
+[Int32]$number2 = 5
+try {
+        $result = $number2 / $number0
+} catch {
+        $_.Exception.Message
+} 
+
+$folder = "./NotFoundFolder"
+try {
+        $files = Get-ChildItem -Path $folder -ErrorAction Stop # -ErrorAction Stop
+        $files.foreach({
+                        $files_text = Get-Contents $files
+                        $files_text[0]
+        })
+} catch {
+        $_Exception.Message
+}
+```
+
+
+
+
