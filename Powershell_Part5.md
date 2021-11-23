@@ -47,7 +47,44 @@ try {
         $_Exception.Message
 }
 ```
+* ***Functions***
 
+```powershell
+$number = 1
+$number2 = 10
+function sum-numbers { $number + $number2 }
+# to call the function use just the name sum-numbers
+```
+```powershell
+# function with Parameters
+$X = 10
+function  sum-numbers {
+    [cmdletbinding()]
+    param(
+        # Parameter help description
+        [Parameter(Mandatory)] # the Parameter is Mandatory 
+        [INT] # INT is the Parameter type of Data [String] [Double] [INT64]......
+        $NUMBER
+    )
+    $X + $NUMBER
+}
+sum-numbers 
+```
+```powershell
 
-
+# Parameter with a Default Value 
+$X = 10
+function  sum-numbers {
+    [cmdletbinding()]
+    param(
+        # Parameter help description
+        [Parameter(Mandatory)] # the Parameter is Mandatory 
+        [INT] # INT is the Parameter type of Data [String] [Double] [INT64]......
+        $NUMBER = 1000
+    )
+    $X + $NUMBER
+}
+sum-numbers
+```
+```powershell
 
