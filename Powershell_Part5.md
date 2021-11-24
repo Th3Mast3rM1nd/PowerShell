@@ -87,4 +87,54 @@ function  sum-numbers {
 sum-numbers
 ```
 ```powershell
+# Parameter Validation 
+$X = 1000
+function sum-numbers {
+     [cmdletbinding()]
+     param(
+           [Parameter()]
+           [ValidateSet(1000,20000)] # we validate that the user must enter 1000 or 20000 otherwise the function will fail 
+           [INT]$NUMBER
+     )
+     $X + $NUMBER
+     
+}
+sum-numbers -NUMBER 1000
+```
+```powershell
+function  Count-files {
+        param(
+                # Parameter help description
+                [Parameter(Mandatory)]
+                [string]
+                $Path
+        )
+        $files = Get-ChildItem -path $path
+        $count = 1
+        $files.foreach( {$count++} )
+                
+        $count 
+}
+
+Count-files -Path ../Downloads
+
+```powershell
+# using pipeline With functions 
+function  Count-files {
+        param(
+                # Parameter help description
+                [Parameter(Mandatory, ValueFromPipeline )] # ValueFromPipeline ( the function will accept the value from a pipeline )
+                [string]
+                $Path
+        )
+        Process { 
+                $files = Get-ChildItem -path $path
+                $count = 1
+                $files.foreach( {$count++} )
+                
+                $count 
+                }
+}
+$directory =  Get-ChildItem -Directory ./ 
+$directory.ForEach({ $_ | Count-files })
 
