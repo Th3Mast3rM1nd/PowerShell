@@ -118,6 +118,8 @@ function  Count-files {
 
 Count-files -Path ../Downloads
 
+```
+
 ```powershell
 # using pipeline With functions 
 function  Count-files {
