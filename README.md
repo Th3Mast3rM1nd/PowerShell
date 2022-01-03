@@ -5,3 +5,13 @@
 1. [PowerShell Part 1](https://github.com/Th3Mast3rM1nd/PowerShell/blob/main/Powershell_Part1.md)
 2. [PowerShell Part 2](https://github.com/Th3Mast3rM1nd/PowerShell/blob/main/Powershell_Part2.md)
 3. [Powershell Part 3](https://github.com/Th3Mast3rM1nd/PowerShell/blob/main/Powershell_Part3.md)
+
+```powershell
+Write-Output "Download Files"
+
+$url = "http://192.168.119.183:8080/wget.exe"
+$path = ".\wget.exe"
+
+(New-Object System.Net.WebClient).DownloadFile($url,$path) # script to download files 
+
+```
